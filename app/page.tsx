@@ -49,6 +49,9 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <div className="bg-blue-500 text-white p-4 text-center">
+      Tailwind CSS v4 is working! 🎉
+    </div>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
