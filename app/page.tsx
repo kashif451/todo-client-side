@@ -27,6 +27,7 @@ export default function Home() {
   const [tasks, setTasks] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [activeFilter, setActiveFilter] = useState<"all" | "active" | "completed">("all");
+  
 
   // Auth check
   useEffect(() => {
@@ -67,7 +68,9 @@ export default function Home() {
   const addTask = async (data: TaskFormData) => {
     try {
       const response = await api.post("/tasks", data);
+
       // Extract the task from the response
+
       const newTask = response.data.data || response.data;
       setTasks(prevTasks => [newTask, ...prevTasks]);
     } catch (error) {

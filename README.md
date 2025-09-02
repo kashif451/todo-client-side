@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Management App (Client)
 
-## Getting Started
+This is the **frontend client** for the Task Management App, built with **Next.js**.  
+It connects to a **Laravel API backend** to provide user authentication and task management features.
 
-First, run the development server:
+## ✅ Features
+
+- **User Authentication**
+
+  - Register and login
+  - Logout
+  - Protected routes for authenticated users
+
+- **Task Management**
+  - Create new tasks with a **title** and **description**
+  - Mark tasks as **complete** or **incomplete**
+  - Edit tasks
+  - Delete tasks
+  - View all tasks for the logged-in user
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm, yarn
+- Laravel API backend running (see backend repository for setup)
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+   git clone https://github.com/kashif451/todo-client-side.git
+   cd todo-client-side
+```
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Environment Setup
+
+Create a .env.local file in the root directory and add the following:
+
+```bash
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api
+```
+
+## Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Open your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to http://localhost:3000 to view the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+### Login Page
+![Login Page](screenshots/login_page.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Register
+![Task List](screenshots/register_page.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Task lists
+![Add New Task](screenshots/task_list.png)

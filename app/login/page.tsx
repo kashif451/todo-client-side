@@ -34,12 +34,10 @@ const LoginPage: React.FC = () => {
       console.log("Login response:", response.data);
       setPopup({ type: "success", message: "Login Successful!" });
 
-      // Optionally store token or user data here
       localStorage.setItem("token", response.data.data.access_token);
 
-      // Navigate to home page after 1 second
       setTimeout(() => {
-        router.push("/"); // navigate to app/page.tsx
+        router.push("/"); 
       }, 1000);
     } catch (error: any) {
       if (error.response) {

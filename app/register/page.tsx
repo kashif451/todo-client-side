@@ -27,7 +27,6 @@ const RegisterPage: React.FC = () => {
   const passwordValue = watch("password", "");
   const router = useRouter();
 
-  // Submit handler
   const onSubmit = async (data: FormData) => {
     setLoading(true);
     try {
@@ -40,9 +39,8 @@ const RegisterPage: React.FC = () => {
 
       setPopup({ type: "success", message: "Registration Successful!" });
 
-      // Navigate to login page after 1.5 seconds
       setTimeout(() => {
-        router.push("/login"); // make sure /login page exists
+        router.push("/login"); 
       }, 1500);
     } catch (error: any) {
       if (error.response) {
